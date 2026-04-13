@@ -145,11 +145,35 @@ export default function MainSection({ data }: Props) {
                     </div>
                 ))}
 
-                <img
-                    src="/images/curved-text.png"
-                    className="absolute top-30 left-0 w-full h-auto z-[1] object-contain px-6"
-                    alt=""
-                />
+                <svg
+                    className="absolute top-45 right-20 w-full z-[2] rotate-[24deg]"
+                    viewBox="0 0 1000 700"
+                    preserveAspectRatio="none"
+                >
+                    <path
+                        id="curve"
+                        d="
+      M 80 70
+      C 280 10, 350 200, 410 300
+      S 560 400 , 750 330 
+      S 890 660, 2000 500
+      S 600 400, 500 400
+    "
+                        fill="transparent"
+                    />
+
+                    <text
+                        fill="#555555"
+                        fontSize="40"
+                        fontStyle="italic"
+                        textLength="1000"
+                        style={{ fontFamily: "var(--font-lavishly)" }}
+                    >
+                        <textPath href="#curve" startOffset="2%">
+                            Thứ 6, Ngày 26, Tháng 11, Năm 2026 (Tức ngày 7 tháng 10 âm lịch)
+                        </textPath>
+                    </text>
+                </svg>
 
                 {/* 🔴 WRAP 2 CIRCLE */}
                 <div className="relative w-full flex justify-center mt-20 mb-25">
